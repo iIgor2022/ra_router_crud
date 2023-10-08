@@ -8,7 +8,7 @@ const PostsPage = () => {
     <>
       <div className="posts__add">
         <button
-          onClick={() => navigate('/ra_router_crud/posts/new')}
+          onClick={() => navigate('../posts/new')}
         >
           Создать пост
         </button>

@@ -48,7 +48,7 @@ const PostPage = () => {
                 </button>
                 <button
                   className="post__edit"
-                  onClick={() => navigate(`/ra_router_crud/posts/edit/${postId}`)}
+                  onClick={() => navigate(`/posts/edit/${postId}`)}
                 >
                   <AiFillEdit size={30} />
                 </button>

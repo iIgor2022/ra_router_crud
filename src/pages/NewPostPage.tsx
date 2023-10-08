@@ -7,7 +7,7 @@ const NewPost = () => {
   const navigate = useNavigate();
 
   const handlerSubmit = () => {
-    if (!content.trim()) return navigate('/ra_router_crud/posts');
+    if (!content.trim()) return navigate('/posts');
 
     fetch('http://localhost:7070/posts', {
       method: 'POST',
@@ -20,7 +20,7 @@ const NewPost = () => {
       })
     });
 
-    navigate('/ra_router_crud/posts');
+    navigate('/posts');
   };
 
   return (
@@ -28,7 +28,7 @@ const NewPost = () => {
       <div className="new-post__options">
         <span>Новое сообщение</span>
         <button
-          onClick={() => navigate('/ra_router_crud/posts')}
+          onClick={() => navigate('/posts')}
         >
           <AiOutlineClose size={30} />
         </button>

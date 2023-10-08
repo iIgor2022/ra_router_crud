@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom"
 import { routes } from "./routes"
-import PostPage from "../pages/PostPage"
+import PostsPage from "../pages/PostsPage"
 
 export const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/ra_router_crud/posts">
+      <Route path="/posts">
         {
           routes.map((route) => 
             <Route
@@ -16,7 +16,7 @@ export const AppRouter = () => {
           )
         }
       </Route>
-      <Route path="/*" element={<PostPage />} />
+      <Route path="/*" element={<PostsPage />} />
     </Routes>
   )
 }

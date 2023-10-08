@@ -18,7 +18,7 @@ const PostRead: React.FC<PostReadProps> = ({ post }) => {
       content={
         <div
           className="post__row post__content"
-          onClick={() => navigate(`/ra_routes_crud/posts/${post.id}`)}
+          onClick={() => navigate(`../posts/${post.id}`)}
         >
           {post.content}
         </div>

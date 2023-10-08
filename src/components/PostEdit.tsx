@@ -13,7 +13,7 @@ const PostEdit: React.FC<PostEditProps> = ({ post }) => {
   const [postContent, setPostContent] = useState(post.content);
 
   const keepContent = (): void => {
-    if (postContent === post.content) return navigate('/ra_router_crud/posts');
+    if (postContent === post.content) return navigate('../posts');
 
     const url = `http://localhost:7070/posts?id=${post.id}`;
     const option = {
@@ -28,7 +28,7 @@ const PostEdit: React.FC<PostEditProps> = ({ post }) => {
     }
 
     fetch(url, option)
-      .then(() => navigate('/ra_router_crud/posts'));
+      .then(() => navigate('/posts'));
   }
 
   return (
@@ -52,7 +52,7 @@ const PostEdit: React.FC<PostEditProps> = ({ post }) => {
       }
       reaction={
         <>
-          <button onChange={keepContent}>
+          <button onClick={keepContent}>
             Сохранить
           </button>
         </>
